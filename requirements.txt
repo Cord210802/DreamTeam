@@ -1,0 +1,8 @@
+spotipy
+matplotlib
+pandas
+scikit-learn
+neo4j
+pymongo
+requests
+py2neo

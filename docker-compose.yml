@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    depends_on:
+      - mongodb
+      - neo4j
+    volumes:
+      - .:/app
+    command: tail -f /dev/null  # Keep the container running
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo_data:/data/db
+
+  neo4j:
+    image: neo4j
+    environment:
+      NEO4J_AUTH: neo4j/password
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data  # Ensure this matches the volume name below
+
+volumes:
+  mongo_data:
+  neo4j_data:  # Make sure this name matches the one used in the neo4j service
