@@ -13,8 +13,13 @@
     ```sh
     docker-compose exec app python app.py
     ```
+3. Ejecutar `top.py` dentro del contenedor `app`:
 
-3. Ejecutar `import.py` dentro del contenedor `app`:
+    ```sh
+    docker-compose exec app python top.py
+    ```
+    
+4. Ejecutar `import.py` dentro del contenedor `app`:
 
     ```sh
     docker-compose exec app python import.py

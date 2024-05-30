@@ -73,7 +73,7 @@ def insert_data(collection, data):
 if __name__ == '__main__':
     client_id = '777d70d148e64be5880d23365b1deea4'
     client_secret = 'dc897f95eb6140f089204c8fe5421ee0'
-    playlist_id = '6U5nSP14fFM1K5y4fvNT3H'
+    playlist_id = '37i9dQZEVXbMDoHDwVN2tF'
     
     token = get_spotify_token(client_id, client_secret)
     playlist_tracks = get_playlist_data(token, playlist_id)
@@ -82,10 +82,9 @@ if __name__ == '__main__':
     db = connect_mongo()
     
     # Insert tracks data
-    tracks_collection = db['tracks']
+    tracks_collection = db['top']
     insert_data(tracks_collection, extracted_data)
     
-    # Fetch and insert artist data
     artist_data = get_artist_data(token, artist_ids)
-    artists_collection = db['artists']
+    artists_collection = db['top_artists']
     insert_data(artists_collection, artist_data)
