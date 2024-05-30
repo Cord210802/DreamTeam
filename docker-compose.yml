@@ -1,7 +1,9 @@
 version: '3.8'
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.python
     depends_on:
       - mongodb
       - neo4j
@@ -28,12 +30,13 @@ services:
       - neo4j_data:/data
 
   jupyter:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyter
     ports:
       - "8888:8888"
     volumes:
       - .:/app
-    command: jupyter lab --ip=0.0.0.0 --allow-root --LabApp.token=''
     depends_on:
       - neo4j
     environment:
