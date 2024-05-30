@@ -82,7 +82,7 @@ if __name__ == '__main__':
     db = connect_mongo()
     
     # Insert tracks data
-    tracks_collection = db['playlist_tracks']
+    tracks_collection = db['tracks']
     insert_data(tracks_collection, extracted_data)
     
     # Fetch and insert artist data
