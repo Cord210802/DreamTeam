@@ -14,7 +14,7 @@
     docker-compose exec app python app.py
     ```
 
-3. Ejecutar `mongo_neo.py` dentro del contenedor `app`:
+3. Ejecutar `import.py` dentro del contenedor `app`:
 
     ```sh
     docker-compose exec app python mongo_neo.py
