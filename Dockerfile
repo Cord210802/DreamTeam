@@ -4,8 +4,8 @@ FROM python:3.8-slim
 # Set the working directory in the container
 WORKDIR /app
 
-RUN pip install --no-cache-dir jupyterlab && \
-    pip install --no-cache-dir -r requirements.txt
+# Install Jupyter and py2neo
+RUN pip install --no-cache-dir jupyterlab py2neo
 
 # Copy the requirements file and install other dependencies
 COPY requirements.txt .
