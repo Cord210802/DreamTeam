@@ -5,7 +5,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Install Jupyter and py2neo
-RUN pip install --no-cache-dir jupyterlab py2neo
+RUN pip install --no-cache-dir jupyterlab
 
 # Copy the requirements file and install other dependencies
 COPY requirements.txt .
