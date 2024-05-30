@@ -60,7 +60,7 @@ def get_artist_data(token, artist_ids):
     return artist_data
 
 def connect_mongo():
-    client = MongoClient('mongodb://localhost:27017/')
+    client = MongoClient('mongodb://mongodb:27017/')
     db = client['spotify']
     return db
 
