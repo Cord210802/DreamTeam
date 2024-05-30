@@ -26,7 +26,9 @@
     ```
 
 ---
-
+#### Playlist
+Si queren usar su playlist cambien el playlist_id. en el app.py linea 76. Si la quieren comparar con otra que no sea el top 50 cambien el playlist_id de top.py.
+Su playlist_id es un número así 37i9dQZEVXbMDoHDwVN2tF sacado del link de su playlist, https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF. Si tiene más números el es el número hasta el sigo ?.
 ### Descripción
 
 DreamTeamETL es un proyecto de extracción, transformación y carga (ETL) que transfiere datos de una base de datos MongoDB a una base de datos Neo4j. Sigue los pasos anteriores para construir y ejecutar los servicios Docker necesarios para el proyecto.
