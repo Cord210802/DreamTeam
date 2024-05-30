@@ -71,8 +71,8 @@ def insert_data(collection, data):
     collection.insert_many(data)
 
 if __name__ == '__main__':
-    client_id = '7f47a9bed06149d3a4d3b6082cc603a0'
-    client_secret = '307364d79419455bab3b7a1087564a76'
+    client_id = '777d70d148e64be5880d23365b1deea4'
+    client_secret = 'dc897f95eb6140f089204c8fe5421ee0'
     playlist_id = '6U5nSP14fFM1K5y4fvNT3H'
     
     token = get_spotify_token(client_id, client_secret)
