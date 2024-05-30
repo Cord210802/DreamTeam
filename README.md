@@ -17,7 +17,7 @@
 3. Ejecutar `import.py` dentro del contenedor `app`:
 
     ```sh
-    docker-compose exec app python mongo_neo.py
+    docker-compose exec app python import.py
     ```
 
 ---
