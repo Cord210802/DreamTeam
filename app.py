@@ -73,7 +73,7 @@ def insert_data(collection, data):
 if __name__ == '__main__':
     client_id = '777d70d148e64be5880d23365b1deea4'
     client_secret = 'dc897f95eb6140f089204c8fe5421ee0'
-    playlist_id = '6U5nSP14fFM1K5y4fvNT3H'
+    playlist_id = '78SG65vqqo1NeFIUH5xNSY'
     
     token = get_spotify_token(client_id, client_secret)
     playlist_tracks = get_playlist_data(token, playlist_id)
