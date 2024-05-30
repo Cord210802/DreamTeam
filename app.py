@@ -89,3 +89,4 @@ if __name__ == '__main__':
     artist_data = get_artist_data(token, artist_ids)
     artists_collection = db['artists']
     insert_data(artists_collection, artist_data)
+
