@@ -60,7 +60,7 @@ def get_artist_data(token, artist_ids):
     return artist_data
 
 def connect_mongo():
-    client = MongoClient('mongodb://mongodb:27017/')
+    client = MongoClient('mongodb://localhost:27017/')
     db = client['spotify']
     return db
 
@@ -70,7 +70,7 @@ def insert_data(collection, data):
 if __name__ == '__main__':
     client_id = '81fb295a64774dc08eeac1267aec9f2b'
     client_secret = 'dafbe1738a084c038670a46bf0806ddc'
-    playlist_id = '6ynjhqZ7mRLPwsZwCEMrsg'
+    playlist_id = 'your_playlist_id'
     
     token = get_spotify_token(client_id, client_secret)
     playlist_tracks = get_playlist_data(token, playlist_id)
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     db = connect_mongo()
     
     # Insert tracks data
-    tracks_collection = db['tracks']
+    tracks_collection = db['playlist_tracks']
     insert_data(tracks_collection, extracted_data)
     
     # Fetch and insert artist data
