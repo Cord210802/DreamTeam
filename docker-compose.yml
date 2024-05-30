@@ -7,7 +7,7 @@ services:
       - neo4j
     volumes:
       - .:/app
-    command: bash -c "chmod +x start.sh && ./start.sh"
+    command: tail -f /dev/null
 
   mongodb:
     image: mongo:latest

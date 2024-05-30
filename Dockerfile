@@ -10,12 +10,3 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the source code of the application to the container
 COPY . .
-
-# Copy the start.sh script
-COPY start.sh .
-
-# Make the start.sh script executable
-RUN chmod +x start.sh
-
-# Run the start.sh script when the container starts
-CMD ["./start.sh"]

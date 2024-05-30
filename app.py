@@ -56,6 +56,9 @@ def get_artist_data(token, artist_ids):
     artist_data = []
     for artist_id in artist_ids:
         response = requests.get(f'https://api.spotify.com/v1/artists/{artist_id}', headers=headers)
+        if response.status_code != 200:
+            print("Failed to fetch artist data:", response.status_code, response.text)
+            continue
         artist_data.append(response.json())
     return artist_data
 
@@ -68,9 +71,9 @@ def insert_data(collection, data):
     collection.insert_many(data)
 
 if __name__ == '__main__':
-    client_id = '81fb295a64774dc08eeac1267aec9f2b'
-    client_secret = 'dafbe1738a084c038670a46bf0806ddc'
-    playlist_id = 'your_playlist_id'
+    client_id = '7f47a9bed06149d3a4d3b6082cc603a0'
+    client_secret = '307364d79419455bab3b7a1087564a76'
+    playlist_id = '6ynjhqZ7mRLPwsZwCEMrsg'
     
     token = get_spotify_token(client_id, client_secret)
     playlist_tracks = get_playlist_data(token, playlist_id)
