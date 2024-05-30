@@ -7,7 +7,7 @@ services:
       - neo4j
     volumes:
       - .:/app
-    command: tail -f /dev/null  # Keep the container running
+    command: bash -c "chmod +x start.sh && ./start.sh"
 
   mongodb:
     image: mongo:latest
